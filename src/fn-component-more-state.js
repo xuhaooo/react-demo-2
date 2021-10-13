@@ -5,15 +5,14 @@ const name = 'Jobs'
 const root = document.getElementById('root')
 
 const App = () => {
-  const [state, setState] = React.useState({
-    m: 0,
-    n: 0
-  })
+  const [n, setN] = React.useState(0)
+  const [m, setM] = React.useState(0)
 
   return (
     <div>
-      {state.n} | {state.m}
-      <button onClick={()=>setState({...state, n: state.n+1})}>n+1</button>
+      {n} | {m}
+      <button onClick={()=>setN(n+1)}>n+1</button>
+      <button onClick={()=>setM(m+1)}>m+1</button>
     </div>
   )
 } 
